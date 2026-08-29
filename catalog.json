@@ -1,0 +1,6 @@
+{
+  "$schema": "./schemas/catalog.schema.json",
+  "format": 1,
+  "repository": "https://github.com/peekling/awesome-peeklings",
+  "peeklings": []
+}

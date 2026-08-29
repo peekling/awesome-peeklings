@@ -1,0 +1,31 @@
+{
+  "name": "awesome-peeklings",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Curated community-created Peekling character Packs",
+  "license": "Apache-2.0",
+  "type": "module",
+  "packageManager": "npm@11.19.0",
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peekling/awesome-peeklings.git"
+  },
+  "scripts": {
+    "check": "npm run format:check && npm test && npm run repository:check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepublishOnly": "node -e \"throw new Error('The community repository root is not publishable')\"",
+    "pr:check": "node scripts/check-pr-scope.mjs",
+    "repository:check": "node scripts/check-repository.mjs",
+    "sync": "node scripts/sync-catalog.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@peekling/cli": "0.1.0",
+    "pngjs": "7.0.0",
+    "prettier": "3.9.6"
+  }
+}

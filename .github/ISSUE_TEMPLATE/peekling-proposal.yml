@@ -1,0 +1,54 @@
+name: Propose a Peekling
+description: Share a community character idea before preparing the Pack.
+title: "Proposal: "
+labels:
+  - proposal
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Everyone is welcome here. A short proposal lets us catch name, rights, and Pack-format questions before you spend time on the final atlas.
+
+  - type: input
+    id: name
+    attributes:
+      label: Peekling name
+      description: Use the display name people will see.
+      placeholder: Sprout
+    validations:
+      required: true
+
+  - type: textarea
+    id: personality
+    attributes:
+      label: Character and personality
+      description: Tell us what this Peekling looks like, how it moves, and what makes it distinct.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: artwork-origin
+    attributes:
+      label: Artwork origin
+      options:
+        - Original artwork made by me
+        - Commissioned artwork with redistribution rights
+        - Adapted artwork with a compatible license
+        - Not decided yet
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: Planned license
+      description: We currently accept Apache-2.0, CC0-1.0, CC-BY-4.0, and CC-BY-SA-4.0.
+      placeholder: CC-BY-4.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Share source links, sketches, tools, or questions that would help review the idea.

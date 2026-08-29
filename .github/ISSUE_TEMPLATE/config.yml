@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask the community
+    url: https://github.com/peekling/awesome-peeklings/discussions
+    about: Ask an authoring question or share an early character idea.
+  - name: Report a security issue privately
+    url: https://github.com/peekling/awesome-peeklings/security/advisories/new
+    about: Tell the maintainers about a security concern without opening a public issue.

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/peekling/awesome-peeklings/schemas/rights.schema.json",
+  "title": "Community Peekling rights record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "format",
+    "creator",
+    "artwork",
+    "license",
+    "statement"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "../../schemas/rights.schema.json"
+    },
+    "format": {
+      "const": 1
+    },
+    "creator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "github"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "github": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?$"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        }
+      }
+    },
+    "artwork": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["origin", "source", "generativeAI"],
+      "properties": {
+        "origin": {
+          "enum": ["original", "commissioned", "adapted"]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 500
+        },
+        "generativeAI": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["used", "tools"],
+          "properties": {
+            "used": {
+              "type": "boolean"
+            },
+            "tools": {
+              "type": "array",
+              "maxItems": 10,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            }
+          }
+        }
+      }
+    },
+    "license": {
+      "enum": ["Apache-2.0", "CC0-1.0", "CC-BY-4.0", "CC-BY-SA-4.0"]
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 500
+    }
+  }
+}

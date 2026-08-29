@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schemas/rights.schema.json",
+  "format": 1,
+  "creator": {
+    "name": "Your name",
+    "github": "your-github-name",
+    "url": "https://example.com/your-portfolio"
+  },
+  "artwork": {
+    "origin": "original",
+    "source": "Created by the named artist for this Peekling Pack.",
+    "generativeAI": {
+      "used": false,
+      "tools": []
+    }
+  },
+  "license": "CC-BY-4.0",
+  "statement": "I created or control the submitted artwork and may redistribute it under the declared license."
+}
