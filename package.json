@@ -24,8 +24,8 @@
     "test": "node --test test/*.test.mjs"
   },
   "devDependencies": {
-    "@peekling/cli": "0.1.0",
+    "@peekling/cli": "0.1.5",
     "pngjs": "7.0.0",
-    "prettier": "3.9.6"
+    "prettier": "3.9.9"
   }
 }
